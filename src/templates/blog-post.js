@@ -10,6 +10,23 @@ const BlogPostTemplate = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
 
+  const styles = {
+    className:'text-gray-600 block px-2 py-1 hover:underline hover:text-gray-900',
+    activeClassName: 'underline text-gray-900'
+  }
+  const tags = post.frontmatter.tags.map(tag => {
+    return {
+      className: styles.className,
+      activeClassName: styles.activeClassName,
+      to: '/tags/'+tag.toLowerCase(),
+      name: tag.toString()
+    }
+  })
+
+  const links = tags.map(link => {
+    return (<Link className={link.className} activeClassName={link.activeClassName} to={link.to}>{link.name}</Link> )
+  })
+
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
@@ -24,6 +41,15 @@ const BlogPostTemplate = ({ data, location }) => {
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
+          <div>
+            {links.map((link, index) => {
+              if (index == tags.length-1) {
+                return link
+              }
+              return <p1>{link}<p2>{', '}</p2></p1>
+            })}
+          </div>
+          <br></br>
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -85,6 +111,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        tags
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
