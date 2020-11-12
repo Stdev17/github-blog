@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Cloud Native Life]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://gatsby-starter-blog-demo.netlify.app</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 12 Nov 2020 05:11:12 GMT</lastBuildDate><item><title><![CDATA[Gatsby와 Github로 정적 블로그 운영하기]]></title><description><![CDATA[…]]></description><link>https://gatsby-starter-blog-demo.netlify.app/building-new-blog/</link><guid isPermaLink="false">https://gatsby-starter-blog-demo.netlify.app/building-new-blog/</guid><pubDate>Wed, 11 Nov 2020 11:40:32 GMT</pubDate><content:encoded>&lt;p&gt;프로그래머라면 누구든 자신만의 개발 블로그를 운영하고 싶어지는 때가 온다고 하죠. 그중에서도 정적 블로그를
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Cloud Native Life]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://gatsby-starter-blog-demo.netlify.app</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 12 Nov 2020 06:20:56 GMT</lastBuildDate><item><title><![CDATA[Gatsby와 Github로 정적 블로그 운영하기]]></title><description><![CDATA[…]]></description><link>https://gatsby-starter-blog-demo.netlify.app/building-new-blog/</link><guid isPermaLink="false">https://gatsby-starter-blog-demo.netlify.app/building-new-blog/</guid><pubDate>Wed, 11 Nov 2020 11:40:32 GMT</pubDate><content:encoded>&lt;p&gt;프로그래머라면 누구든 자신만의 개발 블로그를 운영하고 싶어지는 때가 온다고 하죠. 그중에서도 정적 블로그를
 운영하고 싶어지는 때가 한 번 씩은 찾아온다고 합니다. 네, 저도 결국 정적 블로그 뽕을 맞고 말았습니다!
 사실 정적 블로그를 세팅, 호스팅하는 것은 관리형 블로그 서비스나 워드프레스 등을 사용하는 것에 비해 편의성
 면에서 많이 뒤쳐질 수밖에 없습니다. 당연한 이치죠. 그럼에도 불구하고 정적 블로그라는 옵션을 선택하게 되는
@@ -56,7 +56,16 @@ DB 등을 참조하여 사용자에게 전달할 컨텐츠를 렌더링하여 �
 }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;Option: 개인 도메인 등록하기&lt;/h3&gt;
 &lt;p&gt;개인 도메인을 블로그로 포워딩시키고 싶으시다구요? 아시겠지만 도메인 관리 페이지에서 설정한 CNAME 레코드를
-등록하고, Github 리포 설정에 반영하여야 합니다.&lt;/p&gt;
+등록하고, Github 리포 설정에 반영하여야 합니다. 우선 도메인을 Github Pages 설정에 추가해 주세요.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;&quot; alt=&quot;Saving custmon domain&quot;&gt;&lt;/p&gt;
+&lt;p&gt;이제 도메인의 DNS 설정에서 CNAME 레코드를 등록해 주세요. A 레코드는 서브도메인이 없는 최상위 도메인을 뜻하는데,
+혹시 이것도 추가하고 싶으시다면 A 레코드에 Github Pages의 IP 주소를 골라서 등록해 주세요.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이제 HTTPS를 지원해야겠죠. 이대로 처음 도메인을 등록하면 인증서가 없어서 도메인 주소로 접속이 안 됩니다.
+브라우저 레벨에서 HSTS를 준수하지 않는 사이트를 차단해 버리니까요.&lt;/p&gt;
 &lt;h2&gt;반응형 웹페이지 구현하기&lt;/h2&gt;
 &lt;p&gt;지금까지 우리가 만든 페이지는 PC에만 대응합니다. 다시 말해 모바일로 들어가면, 규격이 맞지 않아 뒤죽박죽
 깨지게 될 거란 말이죠.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[1부. Docker 네트워킹]]></title><description><![CDATA[Docker는 사용 사례에 따라 다섯 가지 네트워킹 방법을 제공합니다. eth0-container Host Networking을 하는 컨테이너는 Host와 IP 주소, 네트워크 네임스페이스를 공유합니다. 이 컨테이너에서 돌아가는 서비스는 Host…]]></description><link>https://gatsby-starter-blog-demo.netlify.app/docker-networking/</link><guid isPermaLink="false">https://gatsby-starter-blog-demo.netlify.app/docker-networking/</guid><pubDate>Wed, 11 Nov 2020 11:40:32 GMT</pubDate><content:encoded>&lt;p&gt;Docker는 사용 사례에 따라 다섯 가지 네트워킹 방법을 제공합니다.&lt;/p&gt;
