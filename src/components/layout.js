@@ -1,6 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 
+import "../icon.css"
+
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
@@ -8,9 +10,15 @@ const Layout = ({ location, title, children }) => {
 
   if (isRootPath) {
     header = (
-      <h1 className="main-heading">
-        <Link to="/">{title}</Link>
-      </h1>
+      <div>
+        <h1 className="main-heading">
+          <Link to="/">{title}</Link>
+        </h1>
+        <link rel="stylesheet" href="./src/icon.css"/>
+        <object alt="" type="image/svg+xml" data="/icons/twitter.svg" class="object"></object>
+        <object alt="" type="image/svg+xml" data="/icons/github-logo.svg" class="object"></object>
+        <object alt="" type="image/svg+xml" data="/icons/discord.svg" class="discord"></object>
+      </div>
     )
   } else {
     header = (

@@ -43,7 +43,7 @@ const BlogPostTemplate = ({ data, location }) => {
           <p>{post.frontmatter.date}</p>
           <div>
             {links.map((link, index) => {
-              if (index == tags.length-1) {
+              if (index === tags.length-1) {
                 return link
               }
               return <p1>{link}<p2>{', '}</p2></p1>

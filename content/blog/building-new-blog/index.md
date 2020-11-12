@@ -60,7 +60,7 @@ Gatsby를 사용해서 블로그를 빠르게 구축할 수 있는, 프로토타
 
 이제 우리 블로그를 인터넷에서 접속할 수 있게 호스팅을 붙여야겠죠. 우리는 [Github Pages](https://pages.github.com/)를 이용할 거에요.
 월 100GB의 트래픽을 제공하고, github.io라는 도메인을 기본으로 제공하죠. 물론 갖고 있는 개인 도메인을
-포워딩시킬 수도 있어요! 그러기 위해 우선 Gatsby 리포를 Github에 올려놓겠습니다. 또, 기본적으로 `<`user`>`.github.io
+포워딩시킬 수도 있어요! 그러기 위해 우선 Gatsby 리포를 Github에 올려놓겠습니다. 또, 기본적으로 `<user>.github.io`
 형태의 리포를 등록하고 나서 Github Pages를 이용할 수 있어요. 자세한 과정은 [이 링크](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/creating-a-github-pages-site)를 참조해 주세요!
 
 이제 gh-pages를 이용해서 Github Pages에 퍼블리시할 브랜치를 생성할 거에요. 우선 gh-pages를 받아 주세요.
@@ -92,10 +92,10 @@ module.exports = {
 개인 도메인을 블로그로 포워딩시키고 싶으시다구요? 아시겠지만 도메인 관리 페이지에서 설정한 CNAME 레코드를
 등록하고, Github 리포 설정에 반영하여야 합니다. 우선 도메인을 Github Pages 설정에 추가해 주세요.
 
-![Saving custom domain]()
+![Saving custom domain](https://res.cloudinary.com/dhc1es6e9/image/upload/v1605167751/blog-img/save-custom-domain_n92w5k.png)
 
 이제 도메인의 DNS 설정에서 CNAME 레코드를 등록해 주세요. A 레코드는 서브도메인이 없는 최상위 도메인을 뜻하는데,
-혹시 이것도 추가하고 싶으시다면 A 레코드에 Github Pages의 IP 주소를 골라서 등록해 주세요.
+혹시 이것도 추가하고 싶으시다면 A 레코드에 Github Pages의 IP 주소를 등록해 주세요.
 
 ```
 185.199.108.153
@@ -104,7 +104,10 @@ module.exports = {
 185.199.111.153
 ```
 
-
+이제 HTTPS를 지원해야겠죠. 이대로 처음 도메인을 등록하면 인증서가 없어서 도메인 주소로 접속이 안 됩니다. 브라우저 레벨에서 HSTS를 준수하지 않는 사이트를 차단해 버리니까요. 옵션에서 Enforce HTTPS를 선택해 주시면 방금 생성되었던 인증서가 무조건 적용됩니다.
+그러면 http 접속에 대해 강제로 https로 리디렉트가 되죠.
+만약 www 연결이 적절한 인증서가 없다고 하면 CNAME 레코드에 원래 도메인을 입력해 주시는 걸로 일단 해결할 수 있어요.
+이때 www 주소에 대한 HTTP 코드는 301 Moved가 나오게 됩니다.
 
 
 ## 반응형 웹페이지 구현하기

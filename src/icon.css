@@ -1,0 +1,14 @@
+.object {
+  width: 34px;
+  height: 38px;
+  box-sizing: content-box;
+  padding-bottom: 4px;
+  margin-top: 13px;
+  margin-right: 12px;
+}
+
+.discord {
+  width: 35px;
+  height: 38px;
+  box-sizing: content-box;
+}
