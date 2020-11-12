@@ -60,7 +60,37 @@ Gatsby를 사용해서 블로그를 빠르게 구축할 수 있는, 프로토타
 
 이제 우리 블로그를 인터넷에서 접속할 수 있게 호스팅을 붙여야겠죠. 우리는 [Github Pages](https://pages.github.com/)를 이용할 거에요.
 월 100GB의 트래픽을 제공하고, github.io라는 도메인을 기본으로 제공하죠. 물론 갖고 있는 개인 도메인을
-포워딩시킬 수도 있어요! 그러기 위해 우선 Gatsby 리포를 Github에 올려놓겠습니다.
+포워딩시킬 수도 있어요! 그러기 위해 우선 Gatsby 리포를 Github에 올려놓겠습니다. 또, 기본적으로 `<`user`>`.github.io
+형태의 리포를 등록하고 나서 Github Pages를 이용할 수 있어요. 자세한 과정은 [이 링크](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/creating-a-github-pages-site)를 참조해 주세요!
+
+이제 gh-pages를 이용해서 Github Pages에 퍼블리시할 브랜치를 생성할 거에요. 우선 gh-pages를 받아 주세요.
+
+```
+npm install gh-pages --save-dev
+```
+
+다음은 Gatsby에 gh-pages 세팅을 할 차례입니다. gastby-config.js에 다음 코드 블럭을 추가해 주세요.
+
+```
+module.exports = {
+  pathPrefix: "/reponame",
+}
+```
+
+그리고, npm의 deploy 스크립트를 추가할 차례입니다. package.json으로 가서 수정해 주세요.
+
+```
+{
+  "scripts": {
+    "deploy": "gatsby build && gh-pages -d public -b master"
+  }
+}
+```
+
+### Option: 개인 도메인 등록하기
+
+개인 도메인을 블로그로 포워딩시키고 싶으시다구요? 아시겠지만 도메인 관리 페이지에서 설정한 CNAME 레코드를
+등록하고, Github 리포 설정에 반영하여야 합니다.
 
 ## 반응형 웹페이지 구현하기
 
