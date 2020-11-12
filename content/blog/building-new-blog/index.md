@@ -1,7 +1,7 @@
 ---
 title: Gatsby와 Github로 정적 블로그 운영하기
 date: "2020-11-11T11:40:32.000Z"
-description: 
+description:
 tags: ["Gatsby", "Github", "Cloudinary"]
 ---
 
@@ -25,7 +25,7 @@ Pod로 보내는 일종의 로드 밸런서 역할도 하게 되죠? 그리하�
 
 그런데 그 정적 블로그, <b>정적 사이트</b>라고 부르는 게 대체 뭘까요. 정적 사이트란, 제공하는 컨텐츠,
 즉 HTML 파일이 배포 이후 변하지 않는 웹사이트를 말합니다. 일반적인 웹사이트는 사용자가 특정 요청을 취하면
-Apache, Nginx 등의 웹서버에 전달되고, 이를 건내받은 PHP, Rails, Next.js 등의 어플리케이션 엔진에서
+Apache, Nginx 등의 웹서버에 전달되고, 이를 건네받은 PHP, Rails, Next.js 등의 어플리케이션 엔진에서
 DB 등을 참조하여 사용자에게 전달할 컨텐츠를 렌더링하여 보냅니다. 이를 <b>Server-side Rendering</b>이라고 합니다.
 
 ![Server-side Rendering](https://res.cloudinary.com/dhc1es6e9/image/upload/v1605058783/blog-img/201111-server-side-rendering-vs-static-site_gqolgk.png)
@@ -43,3 +43,26 @@ Gatsby를 사용해서 블로그를 빠르게 구축할 수 있는, 프로토타
 본 분이라면 create-react-app을 알고 계실 거에요. Gatsby에도 [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog)라는 비슷한 놈이 있죠.
 설치와 세팅을 마치고 나면, 소스 코드에 들어가서 파일을 직접 수정하고, localhost에서 개발 빌드를 확인해
 가면서 개발하는 거에요. React 개발이랑 똑같네요.
+
+## Cloudinary에 이미지 호스팅하기
+
+이제 이미지를 서빙할 방법을 생각해 보아야 합니다. 가장 간단한 선택지로는 물론, 리포 안에 이미지 파일을 저장해
+놓고 빌드 단계에서 HTML 파일에서 이미지 파일을 담는 방식이 있겠죠. 문제점은, 그 이미지 파일을 포함해서 트래픽이
+증가한다는 점이 우선 떠오르네요. 그리고, 우리가 사용할 Github 리포의 용량 한계가 1GB이기 때문에 언젠가는
+용량을 초과할 거란 거에요. 물론 용량 한계가 없더라도 매번 빌드 시간이 증가할 것이기에 이미지 컨텐츠를 정적으로
+서빙하는 것은 좋은 생각이 아닙니다.
+
+그래서 우리는 이미지 파일을 외부에 호스팅해 놓고 참조해 올 거에요. 다양한 옵션이 있지만, 편의성 측면에서 [Cloudinary](https://cloudinary.com)라는
+좋은 무료 서비스가 있습니다. 이미지 변환을 자동으로 해주고 월 최대 25GB의 트래픽을 지원해요. 개인 개발 블로그
+운영하기에 충분한 트래픽이죠. 가입해서 이미지를 등록하고, 링크를 복사해 와서 마크다운에 추가하면 됩니다.
+
+## gh-pages를 이용해 Github에 호스팅하기
+
+이제 우리 블로그를 인터넷에서 접속할 수 있게 호스팅을 붙여야겠죠. 우리는 [Github Pages](https://pages.github.com/)를 이용할 거에요.
+월 100GB의 트래픽을 제공하고, github.io라는 도메인을 기본으로 제공하죠. 물론 갖고 있는 개인 도메인을
+포워딩시킬 수도 있어요! 그러기 위해 우선 Gatsby 리포를 Github에 올려놓겠습니다.
+
+## 반응형 웹페이지 구현하기
+
+지금까지 우리가 만든 페이지는 PC에만 대응합니다. 다시 말해 모바일로 들어가면, 규격이 맞지 않아 뒤죽박죽
+깨지게 될 거란 말이죠.
