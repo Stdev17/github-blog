@@ -15,9 +15,9 @@ const Layout = ({ location, title, children }) => {
           <Link to="/">{title}</Link>
         </h1>
         <link rel="stylesheet" href="./src/icon.css"/>
-        <object alt="" type="image/svg+xml" data="/icons/twitter.svg" class="object"></object>
-        <object alt="" type="image/svg+xml" data="/icons/github-logo.svg" class="object"></object>
-        <object alt="" type="image/svg+xml" data="/icons/discord.svg" class="discord"></object>
+        <object alt="" aria-labelledby="Twitter" type="image/svg+xml" data="/icons/twitter.svg" class="object"></object>
+        <object alt="" aria-labelledby="Github" type="image/svg+xml" data="/icons/github-logo.svg" class="object"></object>
+        <object alt="" aria-labelledby="Discord" type="image/svg+xml" data="/icons/discord.svg" class="discord"></object>
       </div>
     )
   } else {
