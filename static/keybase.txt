@@ -1,0 +1,88 @@
+==================================================================
+https://keybase.io/stdev17
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://berylleta.dev
+  * I am stdev17 (https://keybase.io/stdev17) on keybase.
+  * I have a public key with fingerprint 5FB0 77F8 6039 B648 AF22  F435 BBB4 BFC1 15AD 648C
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012003680ea756d8ee0ed9b679d925cd333b4ba9afc4489f334dd0bacba3cd32825c0a",
+      "fingerprint": "5fb077f86039b648af22f435bbb4bfc115ad648c",
+      "host": "keybase.io",
+      "key_id": "bbb4bfc115ad648c",
+      "kid": "0101802f0d9870fd14d83f021eeea2467e247f797bab6bb938a7fa0d5b767d5f37370a",
+      "uid": "c61f33feff92eb18df47e81492df8119",
+      "username": "stdev17"
+    },
+    "merkle_root": {
+      "ctime": 1605509084,
+      "hash_meta": "a8ffc0e70d6b29156f837c3f5f108cc19cdd4839de8886ccefc75e88f91c0e9c",
+      "seqno": 18134979
+    },
+    "revoke": {
+      "sig_ids": [
+        "606d202e2e413f597b63331dcb05542af05b1dde6023edbd5f91deb9c394c18b0f"
+      ]
+    },
+    "service": {
+      "hostname": "berylleta.dev",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1605509091,
+  "expire_in": 157680000,
+  "prev": "b6c31f4fbc751387ef376e1ac273944d1e5bd57dac03eb889490bb15506bcc6a",
+  "seqno": 20,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.13
+Comment: https://keybase.io/crypto
+
+yMP7AnicbVNrbFRFGN1CeYgiDYRSnoXbIlaWMnOfM/WV2EJaQCABEQSy3nm1y273
+lt3bx9IUtBBIEFBCSn/Iw4INlVi0iGhpAy4QJTYoDy0ESquCJmJRqwGBQnRuAzEx
+3j/33pnzne+c882cHNrfNySp5dCxxMhGtimp7Xh5qS9wMP1qpUIcFldyKpUQ73vx
+MOMxNxAKMiVHAVAFQDMR4LZlmAxxDjjDxLQww6pBmaZpRCc2tgXVdYSFpumMAWJT
+YmtyV0USBGzFr4hgpJBHS6LBiCtpDUGAZQlkAk2S6cgWqip0zSBEsgkKoWEzuUxl
+YZET8yqkOGLHeHbQkWvyJ9An73/wD3UDiIAqAMPIAoJBnSFNABVyzm1VNy2u6paw
+sEVsYhKCNWRbwgbMIJZpMUNolmb16S7to6MmlNYEFwKrnEDEhG5xBHWsMoEgxB4w
+xqMRu5hLdMxlvAxaSpVfKebRUJgHoo7jetlSN+ghoAkMA2CAdOnPjhUFirlry0Ib
+CUEBtwAziYqhYQqkWVQThoAAUQoxZUxHGmYcIWRSygW1DPktMJRl2LMf4ysjjuyA
+oKZjC0sJUV7mhLjXPRYslLHFlJyliglMpgKVq1yHkl/mYMpRQkaJVKartgAGgYxx
+E6gaZ0QmgiHjBFMN6xQiAoSyvMrrFi0L0j5yb04P/BMejYfD0lK2zEFqKok6rkOd
+sNwqct2SWI6XjBsv8bDlnAQesARIMMLkMZEVZTwaCzoR6UMi/xMahn6FV5QEozwQ
+9BCGJY+nfLw+sp1sb1INCl0QGQ7UkMXlNE0ObapaUr3OIDekIYvZFGicIIR1DAiB
+ktwklJr2vymqktS1C72RBgsjtlsa5UrV8cSyZF/SEN/AAf28++Mb8kjKw1vVPjzF
+V1//2dhTYNG8/PgtVcuv6qgbNGXznakNebmdqYWzjhb8mkjdmdoWiT8WTR9be2Fx
+142Ac67paXoqJZDQm6efONs9Lj9t0IT+8dm4hw99/YusdatuXrmzvM53elFn2pn3
+UlZP3ljNxv2UeUvR5m773Hr78o1skGicsic+z7/l+oY59+r39awv/ittxrB+c7vi
+JyZ+PDjn4LI5f1pXpi1uvr+kN2Nt9YSMzrY5O36rePP8440zLu/dxy517ChePnJb
+xbWaLYcunaO7hq0cjzIXJC/eXfw7/rsrt/JI5tZPfpzVkzYg0jLWN7trdPi5UWum
+vnWz4eKeZ7b7e9szp51prenMKN+V8H/jr//+lxFxbc2B4IL8jRNy770cfnd9y6vv
+dD9PRzQ/6TTc3faa+cT9r+6W1titqwuUL8eQk02JpN1tj36Y9bXvxeRVE1v/OD15
+cN2q/Ru6BjQ1haq78xe66QQ+G1LOH3kBD7pdtKJu65p9aXkf7R81Yuel8t7NLZN+
+SE238XB/es/F609FPlCaR3ecxQ2jrp30jZnfriuTWlcsWnf054PXziZXt6avfSVr
+65J+y2bMG9fR/Wl1qBNP3pIlCtK+Tc7u3bVkHerJwvHc5pl5h9yXDiycvn/PyuRb
+O27ebdxw+7uKMYdzBnYf39t6oe6N2surQ8eK5tvb308ta950u7I8XDu+CN24mr20
+4HDNzClHnPZ/AJ/g/oY=
+=uQqD
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/stdev17
+
+==================================================================
