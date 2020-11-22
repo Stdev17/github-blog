@@ -12,8 +12,8 @@ Latest Update: Nov 17, 2020.
 ### Beryl Leta
 the Cloud Native Enthusiast.
 
-* E-mail: [stdev17@gmail.com](mailto:stdev17@gmail.com)
-* Keybase: [stdev17](https://keybase.io/stdev17)
+* E-mail: [stdev17](mailto:stdev17@gmail.com)
+* ![](/icons/favicon-keybase.ico) - [stdev17](https://keybase.io/stdev17)
 * PGP: https://keybase.io/stdev17/pgp_keys.asc
 * Twitter: [Leta](https://twitter.com/leta_chat) :umbrella:
 * Github: https://github.com/Stdev17
