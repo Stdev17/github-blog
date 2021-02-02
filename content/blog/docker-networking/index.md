@@ -1,5 +1,5 @@
 ---
-title: 1부. Docker 네트워킹
+title: Docker 네트워킹
 date: "2020-11-11T11:40:32.000Z"
 description: 
 tags: ["Docker", "Kubernetes", "네트워크"]
